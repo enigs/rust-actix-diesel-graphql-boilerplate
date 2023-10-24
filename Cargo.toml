@@ -70,8 +70,8 @@ macros = { package = "macros", git = "https://github.com/enigs/rust-macros.git",
 [workspace.package]
 version = "0.1.0"
 edition = "2021"
-authors = ["Getaka Labs"]
-description = "Qsweep Graphql API Server"
+authors = ["Mark Henry Liwag<markhenry.liwag@gmail.com>"]
+description = "Graphql API Server"
 
 [profile.release]
 opt-level = 3
