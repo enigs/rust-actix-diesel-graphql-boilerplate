@@ -1,0 +1,12 @@
+[package]
+name = "model"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+diesel = { workspace = true, features = ["postgres", "serde_json", "extras", "64-column-tables"] }
+postgis_diesel = { workspace = true }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { workspace = true }
+
+library.workspace = true

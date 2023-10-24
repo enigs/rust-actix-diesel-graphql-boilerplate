@@ -1,0 +1,79 @@
+[workspace]
+members = [
+    "backend/config",
+    "backend/library",
+    "backend/model",
+    "backend/resolver",
+    "backend/server"
+]
+
+default-members = ["backend/server"]
+resolver = "2"
+
+[workspace.dependencies]
+actix = "0.13.1"
+actix-cors = "0.6.4"
+actix-web = "4"
+actix-web-lab = "0.19.1"
+actix-files = "0.6.2"
+anyhow = "1.0.72"
+argon2 = "0.5.0"
+arraygen = "0.3.2"
+async-graphql = "6.0.7"
+async-graphql-actix-web = "6.0.7"
+base64-url = "2.0.0"
+bstr = "1.4.0"
+chrono = "0.4.24"
+cron = "0.12.0"
+diesel = "2.1.0"
+diesel_migrations = "2.1.0"
+dotenvy = "0.15.7"
+fluent-templates = "0.8.0"
+futures-util = "0.3.28"
+hbs = { package = "handlebars", version = "4.3.7" }
+hyper = "0.14"
+image = "0.24.6"
+infer = "0.15.0"
+lettre = "0.11.0"
+nanoid = "0.4.0"
+once_cell = "1.18.0"
+openssl = "0.10"
+parking_lot = "0.12.1"
+postgis_diesel = "2.2.1"
+pubnub = "0.4.0"
+rand = "0.8.5"
+rusoto_core = "0.48.0"
+rusoto_s3 = "0.48.0"
+sentry = "0.31.1"
+serde = "1.0.176"
+serde_json = "1.0.17"
+sqlx = "0.7.1"
+thiserror = "1.0.40"
+tokio = "1"
+tracing = "0.1.37"
+tracing-actix-web = "0.7.1"
+tracing-appender = "0.2.2"
+tracing-bunyan-formatter = "0.3.2"
+tracing-log = "0.1.3"
+tracing-subscriber = "0.3.17"
+unic-langid = "0.9.1"
+user-agent-parser = "0.3.4"
+xsalsa20poly1305 = "0.9.1"
+
+config = { path = "./backend/config" }
+library = { path = "./backend/library" }
+model = { path = "./backend/model" }
+resolver = { path = "./backend/resolver" }
+
+macros = { package = "macros", git = "https://github.com/enigs/rust-macros.git", version = "0.1.0" }
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Getaka Labs"]
+description = "Qsweep Graphql API Server"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = "symbols"
