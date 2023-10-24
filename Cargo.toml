@@ -70,7 +70,7 @@ macros = { package = "macros", git = "https://github.com/enigs/rust-macros.git",
 [workspace.package]
 version = "0.1.0"
 edition = "2021"
-authors = ["Mark Henry Liwag<markhenry.liwag@gmail.com>"]
+authors = ["Mark Liwag<markhenry.liwag@gmail.com>"]
 description = "Graphql API Server"
 
 [profile.release]
